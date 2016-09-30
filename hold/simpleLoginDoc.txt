@@ -1,0 +1,40 @@
++-------------------------+
+|   SIMPLESLOGIN CLASS    |
++-------------------------+
+
+-------------> Summary
+Simple multi-user rights managment. Ask to login on protected pages.
+Admin manager interface included.
+No database. 1 line of code to insert at the top of protected pages.
+
+
+-------------> Author
+Logan Dugenoux - 2004
+logan.dugenoux@netcourrier.com
+http://www.peous.com/logan/
+
+
+-------------> License
+GPL
+
+
+-------------> Main methods :
+checkLogin()			Ask user to login if not logged, and if logon is wrong, dont displays the page
+checkLogin(0)		Ask user to login if not logged, and if logon is wrong, displays the page anyway
+checkLogin(0,0)		Don't ask user to login if not logged, see userIsLogged()
+ManageUsers()		Displays Manager interface if user is admin
+userIsLogged()		Return true if user login is successfull (use with checkLogin(0,0))
+userName()			Return the userName the louser logged with
+LogOut()				Logs out current user.
+						Automatic if page.php?simpleLogin_logOut=1 is used.
+
+
+-------------> Example :
+<?
+require "simpleLogin.php";
+$sl = new simpleLogin();
+$sl->CheckLogin();		this will not display the page if not logged
+$sl->ManageUsers();		Put this line if you wand the admin to see the manager interface
+?>
+You are identified !<br><br>Your user name is <?=$sl->userName();?>
+<br><br><a href=?simpleLogin_logOut=1>logout</a>

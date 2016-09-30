@@ -1,0 +1,32 @@
+/*********************************************************************
+* Author: Roudy Courser
+* Assignment: WE4.0 PHP Web App Assignment, Digital Skills Academy
+* Student ID: D15128554
+* Date : 2016/05/22
+* Ref: 	Assistance from fellow students Brian Conlon & Callum McLeman
+		Video Tutorial https://www.youtube.com/watch?v=PLay55FdhR8
+**********************************************************************/
+
+html {
+	font-family: Verdana, Geneva, sans-serif;
+}
+h1 {
+	font-size: 24px;
+	text-align: center;
+}
+#wrapper {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	margin-top: -50px;/* half of #content height*/
+}
+#form {
+	margin: auto;
+	width: 200px;
+	height: 100px;
+}
+
+#userpass {
+	margin: auto;
+	text-align: center;
+}
